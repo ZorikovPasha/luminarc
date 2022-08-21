@@ -1,47 +1,81 @@
 .footer {
+  font-size: 16px;
+  line-height: 19px;  
+  background: #4f0c72;
+  color: #ffffff;
 
   &__main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__col {
+
+    &--max-width {
+      max-width: 190px;
+    }
   }
 
   &__link {
+    max-width: 200px;
+    margin-bottom: 30px;
   }
 
   &__phone {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   &__mail {
+    text-decoration-line: underline;
+    color: #ff57ab;
+    margin-top: 5px;
   }
 
   &__label {
+
+    &--pushed {
+      margin-top: 10px;
+    }
   }
 
   &__col-title {
-  }
-
-  &__list {
+    font-weight: 700;
+    margin-bottom: 10px;
   }
 
   &__list-tem {
+    color: #cbacbb;
   }
 
-  &__list-link {
+  &__list-tem + &__list-tem {
+    margin-top: 10px;
   }
 
   &__col-title--big {
+    margin-bottom: 20px;
   }
 
   &__pays {
+    display: flex;
+    align-items: center;
   }
 
   &__agree {
+color: rgba(203, 172, 187, 0.8);
   }
 
   &__bottom {
+    padding: 20px 0;
+    background: #2e0743;
   }
 
-  &__bottom-text {
+  &__up {
+    position: absolute;
+    z-index: 1;
+    right: -60px;
+    bottom: 10px;
   }
 }

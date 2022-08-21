@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from "../images/banner-1.jpg"
+import Grid from "../images/tiles.png"
 import Pic1 from "../images/cat-1.jpg"
 import Pic2 from "../images/cat-2.jpg"
 import Pic3 from "../images/cat-3.jpg"
@@ -19,23 +20,24 @@ import Pic16 from "../images/cat-16.jpg"
 
 export const Main = () => {
   const items = [
-    { img: Pic1, text: "" },
-    { img: Pic2, text: "" },
-    { img: Pic3, text: "" },
-    { img: Pic4, text: "" },
-    { img: Pic5, text: "" },
-    { img: Pic6, text: "" },
-    { img: Pic7, text: "" },
-    { img: Pic8, text: "" },
-    { img: Pic9, text: "" },
-    { img: Pic10, text: "" },
-    { img: Pic11, text: "" },
-    { img: Pic12, text: "" },
-    { img: Pic13, text: "" },
-    { img: Pic14, text: "" },
-    { img: Pic15, text: "" },
-    { img: Pic16, text: "" },
+    { img: Pic1, text: "Сервизы столовые" },
+    { img: Pic2, text: "Сервизы чайные" },
+    { img: Pic3, text: "Тарелки" },
+    { img: Pic4, text: "Салатники" },
+    { img: Pic5, text: "Блюда / Селедочницы" },
+    { img: Pic6, text: "Бокалы / Фужеры" },
+    { img: Pic7, text: "Стаканы / Рюмки" },
+    { img: Pic8, text: "Кружки" },
+    { img: Pic9, text: "Супницы / Бульонницы" },
+    { img: Pic10, text: "Жаропрочная посуда" },
+    { img: Pic11, text: "Контейнеры стеклянные" },
+    { img: Pic12, text: "Банки для сыпучих" },
+    { img: Pic13, text: "Питьевые наборы" },
+    { img: Pic14, text: "Кувшины" },
+    { img: Pic15, text: "Этажерки / Менажницы" },
+    { img: Pic16, text: "Детская посуда" },
   ]
+  
   return (
     <>
       <div className="top">
@@ -63,6 +65,9 @@ export const Main = () => {
                 <p className="catalog__tile-name">{text}</p>
               </div>
             )}
+          </div>
+          <div className="catalog__grid">
+            <img className="catalog__grid-img" src={Grid} alt="" />
           </div>
         </div>
       </section>

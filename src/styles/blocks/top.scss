@@ -1,0 +1,49 @@
+.top {
+  min-height: 700px;
+  background-image: url("../../images/top-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    padding: 30px 0;
+  }
+
+  &__title {
+    font-family: "Georgia";
+    font-style: italic;
+    font-size: 72px;
+    line-height: 120%;
+    text-align: center;
+    color: #61098b;
+  }
+
+  &__text {
+    font-family: "Adventure";
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #cd008d;
+  }
+
+  &__label {
+    position: absolute;
+    z-index: 1;
+    right: -100%;
+    bottom: 276px;
+    text-align: center;
+  }
+
+  &__label-name {
+    font-size: 24px;
+    line-height: 28px;
+    color: #333333;
+  }
+
+  &__label-text {
+    font-family: "Adventure";
+    font-size: 64px;
+    line-height: 77px;
+    color: #fe4699;
+  }
+}

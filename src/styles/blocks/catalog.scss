@@ -1,0 +1,56 @@
+.catalog {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+
+    width: 500px;
+    background-image: url("../../images/main-decor-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    
+    width: 705px;
+    background-image: url("../../images/main-decor-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__banner {
+    margin-top: 60px;
+  }
+
+  &__tile-img {
+    border-radius: 10px;
+  }
+
+  &__tiles {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  &__tile-name {
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+  }
+
+  &__grid {
+    margin: 60px 0;
+  }
+}
