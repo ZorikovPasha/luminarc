@@ -1,12 +1,21 @@
 .top {
-  min-height: 700px;
   background-image: url("../../images/top-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   &__inner {
+    position: relative;
+    min-height: 700px;  
     padding: 30px 0;
+
+    @media (max-width:1200px) {
+      min-height: 530px;
+    }
+
+    @media (max-width: 767px) {
+      min-height: 425px;
+    }
   }
 
   &__title {
@@ -16,22 +25,48 @@
     line-height: 120%;
     text-align: center;
     color: #61098b;
+
+    @media (max-width:1200px) {
+      font-size: 64px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 48px;
+    }
   }
 
   &__text {
-    font-family: "Adventure";
+    font-family: "Adventure", sans-serif;
     font-size: 48px;
     line-height: 120%;
     text-align: center;
     color: #cd008d;
+
+    @media (max-width:1200px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
   }
 
   &__label {
     position: absolute;
     z-index: 1;
-    right: -100%;
+    right: -170px;
     bottom: 276px;
     text-align: center;
+
+    @media (max-width: 1600px) {
+      right: 0;
+    }
+
+    @media (max-width:1200px) {
+      position: static;
+      margin-top: 50px;
+      margin-left: 40px;
+    }
   }
 
   &__label-name {
@@ -41,9 +76,19 @@
   }
 
   &__label-text {
-    font-family: "Adventure";
+    font-family: "Adventure", sans-serif;
     font-size: 64px;
     line-height: 77px;
     color: #fe4699;
+
+    @media (max-width:1200px) {
+      font-size: 48px;
+      line-height: 58px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 36px;
+      line-height: 43px;
+    }
   }
 }

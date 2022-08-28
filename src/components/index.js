@@ -1,4 +1,5 @@
 import { Header } from "./Header"
 import { Footer } from "./Footer"
+import { MobMenu } from "./MobMenu"
 
-export { Header, Footer }
+export { Header, Footer, MobMenu }

@@ -1,13 +1,15 @@
 .header {
-  padding: 10px 0 14px;
+  padding: 10px 0 0;
 
-  &__nav {
-    margin: 0 auto;
+  @media (max-width:1200px) {
+    padding: 0;
+    background: #EF3D89;
   }
 
   &__top-list {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   &__top-item {
@@ -27,10 +29,21 @@
   }
 
   &__phone {
+    display: block;
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
     color: #cd008d;
+
+    @media (max-width:1200px) {
+      text-align: center;
+      font-size: 18px;
+      line-height: 22px;  
+    }
+  }
+
+  &__phone + &__phone {
+    margin-top: 5px;
   }
 
   &__phone--color {
@@ -41,6 +54,7 @@
     font-size: 16px;
     line-height: 19px;
     color: #828282;
+    margin-top: 5px;
   }
 
   &__text--color {
@@ -49,15 +63,27 @@
 
   &__logo {
     max-width: 350px;
+    padding: 0 20px;
+
+    @media (max-width:1200px) {
+      max-width: 150px;
+      padding: 0;
+    }
+
+    @media (max-width: 425px) {
+      max-width: 100px;
+    }
   }
 
   &__actions {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
+    justify-content: flex-end;
   }
 
   &__button {
+    position: relative;
     opacity: 1;
     transition: all 0.2s;
 
@@ -76,7 +102,9 @@
   }
 
   &__count {
-    position: relative;
+    position: absolute;
+    top: -4px;
+    right: -7px;
     z-index: 1;
     font-size: 13px;
     line-height: 15px;
@@ -85,12 +113,12 @@
 
     &::after {
       position: absolute;
-      z-index: 0;
+      z-index: -1;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
       content: "";
-
+      transform: translate(-50%, -50%);
+      width: 100%;
       padding-top: 100%;
       background: #071f5d;
       border-radius: 50%;
@@ -166,10 +194,6 @@
     }
   }
 
-  &__bottom-button:hover + .dropdown {
-    display: grid;
-  }
-
   &__bottom-link {
     display: block;
     font-weight: 500;
@@ -183,7 +207,34 @@
     max-width: 270px;
     flex-shrink: 0;
   }
+
+  &__inner {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 12px 0;
+  } 
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    display: block;
+  }
+
+  &__button + &__button {
+    margin-left: 20px;
+  }
 }
+
+
 
 .header-search {
   &__field {
@@ -216,4 +267,8 @@
     right: 7px;
     transform: translate(0%, -50%);
   }
+}
+
+[data-drop-toggle]:hover .dropdown {
+  display: grid;
 }

@@ -1,0 +1,221 @@
+.reviews {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+
+    width: 500px;
+    background-image: url("../../images/reviews-decor-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width:1920px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    
+    width: 702px;
+    background-image: url("../../images/reviews-decor-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width:1920px) {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px 30px;
+    margin-top: 60px;
+
+    @media (max-width:1200px) {
+      grid-gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 50px;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__item {
+    transform: translate(0);
+    transition: all .3s;
+
+    &:hover {
+      transform: translate(0, -5px);
+    }
+  }
+
+  &__item-name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 20px;
+
+    @media (max-width:1200px) {
+      margin-top: 10px;
+    }
+  }
+
+  &__item-box {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 53%;
+
+    @media (max-width:1200px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__item-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: scale 2s linear infinite;
+
+    @media (max-width:1200px) {
+      width: 77px;
+      height: 77px;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 152%;
+    color: #000000;
+    background: linear-gradient(87.59deg, #FFDE00 0%, #FFF668 100%);
+    border-radius: 50px;
+    padding: 10px 35px 10px 20px;
+
+    &:hover::after {
+      opacity: 0.8;
+      transform: translate(10px, -50%);
+    }
+    &:focus::after {
+      opacity: 0.8;
+      transform: translate(10px, -50%);
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      right: 20px;
+      content: "";
+      
+      transform: translate(0, -50%);
+      width: 5px;
+      height: 10px;
+      background-image: url('../../images/arrow-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: all .3s;
+      opacity: 1;
+    }
+  }
+
+  &__more {
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    background: #CD008D;
+    border: 1px solid #CD008D;
+    border-radius: 50px;
+    transition: all .3s;
+
+    &:hover, &:focus {
+      background: #FFFFFF;
+      color: #CD008D;
+    }
+
+    &:active {
+      color: #FFFFFF;
+      background: #CD008D;  
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: -17px;
+      content: "";
+
+      width: 16px;
+      height: 100%;
+      background-color: #FFFFFF;
+    }
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: -17px;
+      content: "";
+
+      width: 16px;
+      height: 100%;
+      background-color: #FFFFFF;
+    }
+  }
+
+  &__more-wrap {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width:1200px) {
+      margin-top: 30px;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 0;
+      content: "";
+      
+      width: 100%;
+      height: 1px;
+      background: #CD008D;
+    }
+  }
+}

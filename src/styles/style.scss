@@ -1,4 +1,5 @@
 @import "_null.scss";
+@import "_fonts.scss";
 @import "_global.scss";
 @import "_header.scss";
 @import "_footer.scss";
@@ -6,6 +7,8 @@
 
 @import "./blocks/catalog.scss";
 @import "./blocks/top.scss";
+@import "./blocks/reviews.scss";
 @import "./blocks/dropdown.scss";
+@import "./blocks/mobmenu.scss";
 
 @import "_media.scss";
