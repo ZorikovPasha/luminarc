@@ -1,0 +1,161 @@
+.footer {
+  font-size: 16px;
+  line-height: 19px;  
+  background: #4f0c72;
+  color: #ffffff;
+
+  &__main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    padding-top: 70px;
+
+    @media (max-width:1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      padding-top: 65px;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__col {
+    max-width: 180px;
+
+    &--fullwidth {
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+    }
+
+    &--fg {
+      max-width: 100%;
+
+      @media (max-width:1200px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+        grid-column: 1 / 2;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__col-block {
+
+    &--fgrow {
+      @media (max-width: 767px) {
+        width: 100%;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 200px;
+    margin-bottom: 30px;
+
+    @media (max-width: 767px) {
+      max-width: 190px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 425px) {
+      max-width: 130px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+      white-space: nowrap;
+    }
+  }
+
+  &__mail {
+    text-decoration-line: underline;
+    color: #ff57ab;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+
+    &--pushed {
+      margin-top: 10px;
+    }
+  }
+
+  &__col-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__list-tem {
+    color: #cbacbb;
+  }
+
+  &__list-tem + &__list-tem {
+    margin-top: 10px;
+  }
+
+  &__col-title--big {
+    margin-bottom: 20px;
+  }
+
+  &__pays {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  &__agree {
+    display: block;
+    color: rgba(203, 172, 187, 0.8);
+    margin-top: 10px;
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    background: #2e0743;
+  }
+
+  &__bottom-text {
+    text-align: center;
+  }
+
+  &__up {
+    position: absolute;
+    z-index: 1;
+    right: -60px;
+    bottom: 10px;
+
+    @media (max-width:1200px) {
+      right: 0;
+      bottom: 10px;
+    }
+
+    @media (max-width: 767px) {
+      bottom: -35px;
+    }
+  }
+}

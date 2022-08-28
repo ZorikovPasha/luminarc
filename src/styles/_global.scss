@@ -16,6 +16,12 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   height: 100%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
 
   &.lock {
     overflow: hidden;
@@ -45,9 +51,11 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 1200px;
 }
 
 button {
+  font-family: "Roboto";
   padding: 0;
   margin: 0;
   border: none;

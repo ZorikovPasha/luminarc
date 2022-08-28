@@ -1,0 +1,36 @@
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+
+  width: 1170px;
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px 28px;
+  background: #ffffff;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  padding: 30px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .2s;
+    
+    &:hover {
+      border: 1px dashed #EF3D89;
+    }
+  }
+
+  &__item-name {
+    margin-left: 15px;
+    white-space: nowrap;
+  }
+
+  &__item-img {
+    max-width: 50px;
+  }
+}
